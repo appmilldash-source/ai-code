@@ -1,0 +1,35 @@
+{
+  "name": "ai-provider-discovery",
+  "version": "1.0.0",
+  "description": "Automatic AI provider and model discovery system",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "ai",
+    "ollama",
+    "openai",
+    "gemini",
+    "model-discovery"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "google-auth-library": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.1",
+    "jest": "^29.7.0"
+  }
+}
